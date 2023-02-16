@@ -75,8 +75,7 @@ $row = $result->fetch_assoc();
 
                             <ul class="site-menu js-clone-nav mx-auto d-none d-lg-block">
                                 <li class="active"><a href="index.html">Home</a></li>
-                                <li><a href="about.html" style="color:rgb(0, 0, 0)">Track Driver</a></li>
-                                <li><a href="about.html" style="color:rgb(0, 0, 0)">Contact Driver</a></li>
+                                <li><a href="#" style="color:rgb(0, 0, 0)">Track Driver</a></li>
                             </ul>
                         </nav>
                     </div>
@@ -101,7 +100,7 @@ $row = $result->fetch_assoc();
                 <div class="site-section bg-light">
                     <div class="container">
                         <div class="row">
-                            <div class="col-md-12 mb-5">
+                            <div class="col-md-6 mb-5">
 
 
 
@@ -109,20 +108,20 @@ $row = $result->fetch_assoc();
 
 
                                     <div class="row form-group">
-                                        <div class="col-md-6 mb-3 mb-md-0">
+                                        <div class="col-md-12 mb-3 mb-md-0">
                                             <label class="text-black" for="fname">Driver's ID :</label><?php echo "  ".$row["driver_id"] ?>
 
                                         </div>
                                     </div>
                                     <div class="row form-group">
-                                        <div class="col-md-6">
+                                        <div class="col-md-12">
                                             <label class="text-black" for="lname">GPS Provider :</label><?php echo "  ".$row["GpsProvider"] ?>
                                         </div>
                                     </div>
 
                                     <div class="row form-group">
 
-                                        <div class="col-md-6">
+                                        <div class="col-md-12">
                                             <label class="text-black" for="email">Booking ID:</label><?php echo "  ".$row["BookingID"] ?>
 
                                         </div>
@@ -130,14 +129,14 @@ $row = $result->fetch_assoc();
 
                                     <div class="row form-group">
 
-                                        <div class="col-md-6">
+                                        <div class="col-md-12">
                                             <label class="text-black" for="subject">Booking Date:</label><?php echo "  ".$row["BookingID_Date"] ?>
 
                                         </div>
                                     </div>
                                     <div class="row form-group">
 
-                                        <div class="col-md-6">
+                                        <div class="col-md-12">
                                             <label class="text-black" for="subject">Vehicle Number:</label><?php echo "  ".$row["vehicle_no"] ?>
 
                                         </div>
@@ -145,22 +144,25 @@ $row = $result->fetch_assoc();
 
                                     <div class="row form-group">
 
-                                        <div class="col-md-6">
+                                        <div class="col-md-12">
                                             <label class="text-black" for="subject">Pickup Location :</label><?php echo "  ".$row["Origin_Location"] ?>
 
                                         </div>
-                                    </div>
-
+                                    </div>                    
+                                </form>
+                            </div>
+                            <div class="col-md-6 mb-5">
+                                <form action="#" class="p-5 bg-white">
                                     <div class="row form-group">
 
-                                        <div class="col-md-6">
+                                        <div class="col-md-12">
                                             <label class="text-black" for="subject">Destination Location :</label><?php echo "  ".$row["Destination_Location"] ?>
 
                                         </div>
                                     </div>
                                     <div class="row form-group">
 
-                                        <div class="col-md-6">
+                                        <div class="col-md-12">
                                             <label class="text-black" for="subject">Planned ETA :</label><?php echo "  ".$row["Planned_ETA"] ?>
 
                                         </div>
@@ -168,7 +170,7 @@ $row = $result->fetch_assoc();
 
                                     <div class="row form-group">
 
-                                        <div class="col-md-6">
+                                        <div class="col-md-12">
                                             <label class="text-black" for="subject">Current Location :</label><?php echo "  ".$row["Current_Location"] ?>
 
                                         </div>
@@ -176,26 +178,48 @@ $row = $result->fetch_assoc();
 
                                     <div class="row form-group">
 
-                                        <div class="col-md-6">
+                                        <div class="col-md-12">
                                             <label class="text-black" for="subject">Trip Start Date:</label><?php echo "  ".$row["trip_start_date"] ?>
 
                                         </div>
                                     </div>
                                     <div class="row form-group">
 
-                                        <div class="col-md-6">
+                                        <div class="col-md-12">
                                             <label class="text-black" for="subject">Customer Name Code:</label><?php echo "  ".$row["customerNameCode"] ?>
 
                                         </div>
                                     </div>
                                 </form>
                             </div>
-
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+
+        <div class="site-section">
+            <div class="container">
+                <div class="row justify-content-center mb-5">
+                    <div class="col-md-12 text-center border-primary">
+                        <h2 class="mb-0 text-primary">Driver's Live Location: </h2>
+                        <iframe
+                            width="600"
+                            height="450"
+                            style="border:0"
+                            loading="lazy"
+                            allowfullscreen
+                            referrerpolicy="no-referrer-when-downgrade"
+                            src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBv9cjwGA2RdmdHbiZkRS9TT5Gp6TiDpXE
+                             &q=MIT ADT NEW SCHOOL OF ENGINEERING">
+                            </iframe>
+                    </div>
+                </div>
+
+                
+            </div>
+        </div>
+       
 
 
 
@@ -254,20 +278,10 @@ $row = $result->fetch_assoc();
         </footer>
     </div>
 
-    <script src="js/jquery-3.3.1.min.js"></script>
-    <script src="js/jquery-migrate-3.0.1.min.js"></script>
-    <script src="js/jquery-ui.js"></script>
-    <script src="js/popper.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/owl.carousel.min.js"></script>
-    <script src="js/jquery.stellar.min.js"></script>
-    <script src="js/jquery.countdown.min.js"></script>
-    <script src="js/jquery.magnific-popup.min.js"></script>
-    <script src="js/bootstrap-datepicker.min.js"></script>
-    <script src="js/aos.js"></script>
-
+   
     <script src="js/main.js"></script>
 
 </body>
 
 </html>
+
